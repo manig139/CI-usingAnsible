@@ -1,9 +1,4 @@
 ---
-- name: yu- update
-  yum: 
-    name: "*"
-    state: latest
-     
 - name: Install Java 1.8
   yum: name=java-1.8.0-opendk
   
