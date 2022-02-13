@@ -1,6 +1,17 @@
 ---
-- name: Install Java 1.7
-  yum: name=java-1.7.0-openjdk state=present
+- name: yu- update
+  yum: 
+    name: "*"
+    state: latest
+     
+- name: Install Java 1.8
+  yum: name=java-1.8.0-opendk
+  
+- name: setting a defult java
+  alternatives:
+    name: java
+    link: /usr/bin/java
+    path: /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java 
 
 - name: add group "tomcat"
   group: name={{tomcat_group}}
