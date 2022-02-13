@@ -1,6 +1,8 @@
 ---
-- name: Install Java 1.8
-  yum: name=java-1.8.0-opendk
+- name: Install Java 1.8.0
+  yum: 
+    name: java-1.8.0-openjdk
+    state: present
   
 - name: setting a defult java
   alternatives:
