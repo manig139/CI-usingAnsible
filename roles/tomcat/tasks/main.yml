@@ -4,12 +4,6 @@
     name: java-1.8.0-openjdk
     state: present
   
-- name: setting a defult java
-  alternatives:
-    name: java
-    link: /usr/bin/java
-    path: /usr/lib/jvm/jre-1.8.0-openjdk.x86_64/bin/java 
-
 - name: add group "tomcat"
   group: name={{tomcat_group}}
 
